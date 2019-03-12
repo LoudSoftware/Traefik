@@ -84,7 +84,6 @@
           - /opt/appdata/traefik/traefik.toml:/etc/traefik/traefik.toml:ro
           - /opt/appdata/traefik/acme:/etc/traefik/acme
           - "{{% if pg_env.GCE_SERVICE_ACCOUNT_FILE is defined pg_env.GCE_SERVICE_ACCOUNT_FILE:pg_env.GCE_SERVICE_ACCOUNT_FILE:ro endif %"
-          {{% endif %}}
         restart_policy: unless-stopped
         state: started
         networks:
